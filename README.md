@@ -6,8 +6,7 @@ tutorial (https://egghead.io/lessons/react-course-introduction-beautiful-and-acc
 #### `03-create-and-style-a-list-of-data-with-react`
 #### `04-reorder-a-list-with-react-beautiful-dnd`
 
-
-
+![Drag and Drop](https://cdn-images-1.medium.com/max/1600/1*pA-mWjMWTPXwqN41WMQh-A.png)
 
 
 
