@@ -24,6 +24,9 @@ class App extends React.Component {
 
     const column = this.state.columns[source.droppableId];
     const newTaskIds = Array.from(column.taskIds);
+
+    console.log("stage :",column)
+    console.log("step :",newTaskIds)
     newTaskIds.splice(source.index, 1);
     newTaskIds.splice(destination.index, 0, draggableId);
 
