@@ -7,8 +7,7 @@ tutorial (https://egghead.io/lessons/react-course-introduction-beautiful-and-acc
 
 #### `03-create-and-style-a-list-of-data-with-react`
 #### `04-reorder-a-list-with-react-beautiful-dnd`
-
-
-
-
-
+#### `05-persist-list-reordering-with-react-beautiful-dnd-using-the-on-drag-end-callback`
+#### `06-customise-the-appearance-of-an-app-during-a-drag-using-react-beautiful-dnd-snapshot-values`
+#### `07-customise-the-appearance-of-an-app-using-react-beautiful-dnd-on-drag-start-and-on-drag-end`
+#### `08-designate-control-of-dragging-for-a-react-beautiful-dnd-draggable-with-drag-handle-props`
