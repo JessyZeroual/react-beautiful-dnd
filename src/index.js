@@ -8,7 +8,25 @@ import Column from "./column";
 class App extends React.Component {
   state = initialData;
 
+  onDragStart = () => {
+    document.body.style.color = "orange";
+    document.body.style.transition = 'background-color 0.2s ease';
+  }
+
+  onDragUpdate = update => {
+    const { destination } = update;
+    const opacity = destination
+      ? destination.index / Object.keys(this.state.tasks).length
+      : 0;
+    document.body.style.backgroundColor = `rgba(153, 141, 217, ${opacity})`;
+
+  };
+
   onDragEnd = result => {
+    document.body.style.color = "inherit";
+    document.body.style.backgroundColor = "inherit";
+  
+
     const { destination, source, draggableId } = result;
 
     if (!destination) {
@@ -25,8 +43,8 @@ class App extends React.Component {
     const column = this.state.columns[source.droppableId];
     const newTaskIds = Array.from(column.taskIds);
 
-    console.log("stage :",column)
-    console.log("step :",newTaskIds)
+    console.log("stage :", column);
+    console.log("step :", newTaskIds);
     newTaskIds.splice(source.index, 1);
     newTaskIds.splice(destination.index, 0, draggableId);
 
@@ -39,17 +57,21 @@ class App extends React.Component {
       ...this.state,
       columns: {
         ...this.state.columns,
-        [newColumn.id]: newColumn,
-      },
+        [newColumn.id]: newColumn
+      }
     };
 
     this.setState(newState);
   };
 
   render() {
-      console.log(this.state)
+    console.log(this.state);
     return (
-      <DragDropContext onDragEnd={this.onDragEnd}>
+      <DragDropContext
+        onDragStart={this.onDragStart}
+        onDragUpdate={this.onDragUpdate}
+        onDragEnd={this.onDragEnd}
+      >
         {this.state.columnOrder.map(columnId => {
           const column = this.state.columns[columnId];
           const tasks = column.taskIds.map(taskId => this.state.tasks[taskId]);
