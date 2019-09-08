@@ -11,3 +11,7 @@ tutorial (https://egghead.io/lessons/react-course-introduction-beautiful-and-acc
 #### `06-customise-the-appearance-of-an-app-during-a-drag-using-react-beautiful-dnd-snapshot-values`
 #### `07-customise-the-appearance-of-an-app-using-react-beautiful-dnd-on-drag-start-and-on-drag-end`
 #### `08-designate-control-of-dragging-for-a-react-beautiful-dnd-draggable-with-drag-handle-props`
+#### `09-move-items-between-columns-with-react-beautiful-dnd-using-on-drag-end`
+#### `09-move-items-between-columns-with-react-beautiful-dnd-using-on-drag-end`
+#### `09-move-items-between-columns-with-react-beautiful-dnd-using-on-drag-end`
+#### `09-move-items-between-columns-with-react-beautiful-dnd-using-on-drag-end`
